@@ -1,17 +1,20 @@
-import './App.css'
-import TodoForm from './TodoForm'
-import TodoList from './TodoList'
+import './App.css';
+import TodoForm from './TodoForm';
+import TodoList from './TodoList';
+import { useState } from 'react';
 
 function App() {
+  const [newTodo, setNewTodo] = useState('New task');
 
   return (
     <div>
-        <h1>Todo List</h1>
+      <h1>Todo List</h1>
 
-        <TodoForm></TodoForm>
-        <TodoList></TodoList>
+      <TodoForm />
+      <p>{newTodo}</p>
+      <TodoList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
